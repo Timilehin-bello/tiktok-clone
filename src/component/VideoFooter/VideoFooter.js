@@ -5,7 +5,7 @@ function VideoFooter() {
   return (
     <div className="videoFooter">
       <div className="videoFooter__text"></div>
-      <img src="" alt="" />
+      <img src="https://static." alt="" />
     </div>
   );
 }
