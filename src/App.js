@@ -10,6 +10,7 @@ function App() {
         <VideoCard />
         <VideoCard />
         <VideoCard />
+        <VideoCard />
       </div>
     </div>
   );
