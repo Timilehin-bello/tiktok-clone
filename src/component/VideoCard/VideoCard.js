@@ -1,9 +1,17 @@
 import React, { useRef, useState } from "react";
 import "./VideoCard.css";
-import Video1 from "../Video/Video1.mp4";
 import VideoFooter from "../VideoFooter/VideoFooter";
+import VideoSidebar from "../VideoSidebar/VideoSidebar";
 
-function VideoCard() {
+function VideoCard({
+  url,
+  channel,
+  description,
+  song,
+  likes,
+  messages,
+  shares,
+}) {
   const [playing, setPlaying] = useState(false);
   const videoRef = useRef(null);
 
@@ -21,12 +29,13 @@ function VideoCard() {
     <div className="videoCard">
       <video
         className="videoCard__video"
-        src={Video1}
+        src={url}
         loop
         ref={videoRef}
         onClick={onVideoClick}
       />
-      <VideoFooter />
+      <VideoFooter channel={channel} description={description} song={song} />
+      <VideoSidebar likes={likes} messages={messages} shares={shares} />
     </div>
   );
 }
